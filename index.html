@@ -3,15 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luminary Coaching: Transform Crisis Into Growth</title>
+    <meta name="description" content="Transform crisis into growth with Harvard-certified mental health coaching. Expert guidance for high-achievers in transition using neuroscience and sacred traditions.">
+    <meta name="keywords" content="mental health coaching, crisis management, high-achiever coaching, neuroscience coaching, personal transformation">
+    <meta name="author" content="Marina Dimshits">
 
-    <!-- Fonts: Playfair Display (serif) + Jost (sans-serif) -->
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luminarycoaching.com">
+    <meta property="og:title" content="Luminary Coaching: Transform Crisis Into Growth">
+    <meta property="og:description" content="Harvard-Certified Coach for High-Achievers in Transition">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Luminary Coaching: Transform Crisis Into Growth">
+    <meta property="twitter:description" content="Harvard-Certified Coach for High-Achievers in Transition">
+
+    <title>Luminary Coaching: Transform Crisis Into Growth | Harvard-Certified Mental Health Coach</title>
+
+    <!-- Fonts: Forum (serif) + Jost (sans-serif) - Jetox-inspired -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Swiper Slider -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -19,13 +38,20 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        serif: ['Playfair Display', 'serif'],
+                        serif: ['Forum', 'serif'],
                         sans: ['Jost', 'sans-serif'],
                     },
                     colors: {
                         'navy': '#011E41',
                         'copper': '#9B552B',
+                        'light-beige': '#E7E6E2',
                         'light-gray': '#f5f5f5',
+                    },
+                    spacing: {
+                        '40': '40px',
+                        '80': '80px',
+                        '120': '120px',
+                        '160': '160px',
                     }
                 }
             }
@@ -33,42 +59,79 @@
     </script>
 
     <style>
+        :root {
+            --color-navy: #011E41;
+            --color-copper: #9B552B;
+            --color-light-beige: #E7E6E2;
+            --color-light-gray: #f5f5f5;
+            --color-white: #ffffff;
+
+            --spacing-40: 40px;
+            --spacing-80: 80px;
+            --spacing-120: 120px;
+            --spacing-160: 160px;
+
+            --font-base: 24px;
+            --font-heading-xl: 50px;
+            --font-heading-lg: 42px;
+            --font-heading-md: 36px;
+        }
+
         body {
             font-family: 'Jost', sans-serif;
             scroll-behavior: smooth;
+            font-size: var(--font-base);
+            line-height: 1.6;
         }
 
         h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Forum', serif;
+            font-weight: 700;
         }
 
-        /* Hero Section with Background */
+        /* Hero Section with Video Background Support */
         .hero-section {
             background: linear-gradient(135deg, rgba(1, 30, 65, 0.85), rgba(1, 30, 65, 0.6)),
                         url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             min-height: 100vh;
+            position: relative;
+        }
+
+        .hero-section video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
 
         /* Button Styles */
         .btn-primary {
-            background: #9B552B;
+            background: var(--color-copper);
             color: white;
-            padding: 16px 40px;
-            border-radius: 8px;
+            padding: 18px 48px;
+            border-radius: 10px;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 20px;
             transition: all 0.3s ease;
             display: inline-block;
             text-decoration: none;
+            box-shadow: 0 4px 12px rgba(155, 85, 43, 0.2);
         }
 
         .btn-primary:hover {
             background: #7d4423;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(155, 85, 43, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(155, 85, 43, 0.4);
+        }
+
+        .btn-primary:focus {
+            outline: 3px solid rgba(155, 85, 43, 0.5);
+            outline-offset: 2px;
         }
 
         /* Icon Styles */
@@ -82,31 +145,43 @@
             justify-content: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             margin: 0 auto 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-circle:hover {
+            transform: scale(1.1);
         }
 
         /* Badge Styles */
         .badge {
             background: white;
-            padding: 12px 24px;
-            border-radius: 8px;
+            padding: 14px 28px;
+            border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             font-weight: 600;
-            color: #011E41;
+            color: var(--color-navy);
+            font-size: 18px;
         }
 
-        /* Section Padding */
+        /* Section Padding - Jetox Spacing System */
         section {
-            padding: 80px 20px;
+            padding: var(--spacing-120) var(--spacing-40);
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: var(--spacing-80) var(--spacing-40);
+            }
         }
 
         /* Horizontal Card Layout */
         .horizontal-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            gap: 40px;
         }
 
         /* Testimonial Slider */
@@ -115,293 +190,619 @@
         }
 
         .swiper-button-next, .swiper-button-prev {
-            color: #9B552B;
+            color: var(--color-copper);
         }
 
         .swiper-pagination-bullet-active {
-            background: #9B552B;
+            background: var(--color-copper);
         }
 
         /* Footer */
         footer {
-            background: #011E41;
+            background: var(--color-navy);
             color: white;
         }
 
         footer a:hover {
-            color: #9B552B;
+            color: var(--color-copper);
         }
 
         /* Rounded corners everywhere */
         img, .card, .section-box {
             border-radius: 12px;
         }
+
+        /* FAQ Accordion Styles */
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--color-navy);
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--color-light-gray);
+        }
+
+        .faq-answer {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: #4a5568;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 24px 24px 24px;
+            max-height: 500px;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Sticky Header Enhancement */
+        header {
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Skip to content for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--color-copper);
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 0 0 8px 0;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Enhanced focus indicators */
+        a:focus, button:focus {
+            outline: 3px solid var(--color-copper);
+            outline-offset: 2px;
+        }
+
+        /* Feature comparison table */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Contact Card Enhancement - Better UX */
+        .contact-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            margin-bottom: 12px;
+            background: rgba(1, 30, 65, 0.05);
+        }
+
+        .contact-item:hover {
+            background: rgba(1, 30, 65, 0.1);
+            transform: translateX(8px);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--color-copper);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .contact-text {
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .contact-label {
+            font-size: 14px;
+            color: #666;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .contact-value {
+            font-size: 18px;
+            color: var(--color-navy);
+            font-weight: 600;
+        }
+
+        .contact-value a {
+            color: var(--color-navy);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-value a:hover {
+            color: var(--color-copper);
+        }
+
+        @media (max-width: 768px) {
+            .contact-card {
+                padding: 24px;
+            }
+
+            .contact-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .contact-value {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Header Navigation -->
-    <header class="fixed top-0 w-full bg-white shadow-md z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#hero" class="text-3xl font-bold text-navy">Luminary</a>
-            <a href="#contact" class="btn-primary">Book Free Call</a>
-        </div>
+    <header class="fixed top-0 w-full bg-white shadow-md z-50" role="banner">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center" aria-label="Main navigation">
+            <a href="#hero" class="text-3xl font-bold text-navy" aria-label="Luminary Coaching Home">Luminary</a>
+            <a href="#contact" class="btn-primary" aria-label="Book a free discovery call">Book Free Call</a>
+        </nav>
     </header>
 
     <!-- Hero Section: Full-Width with Background Image -->
-    <section id="hero" class="hero-section flex items-center justify-center text-center text-white">
-        <div class="max-w-4xl px-6">
+    <section id="hero" class="hero-section flex items-center justify-center text-center text-white" role="banner">
+        <!-- Optional: Uncomment for video background
+        <video autoplay muted loop playsinline>
+            <source src="your-video.mp4" type="video/mp4">
+        </video>
+        -->
+        <div class="max-w-4xl px-6" data-aos="fade-up">
             <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                 Transform Crisis Into Your<br>Defining Growth Point
             </h1>
-            <p class="text-xl md:text-2xl mb-8 font-light">
+            <p class="text-2xl md:text-3xl mb-8 font-light">
                 Harvard-Certified Coach for High-Achievers in Transition
             </p>
-            <a href="#contact" class="btn-primary text-lg">Book Your Free Discovery Call</a>
+            <a href="#contact" class="btn-primary text-lg" aria-label="Book your free discovery call now">Book Your Free Discovery Call</a>
         </div>
     </section>
 
-    <!-- About Marina Section: White Background -->
-    <section id="about" class="bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Photo -->
-                <div class="order-2 md:order-1">
-                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD//gA7Q1JFQVRPUjogSU1BR0VOIFJFQURFUyBNUVAgNjcuMTUgMjAwMTowOToyNyAoVmVyc2lvbiB0aGVzZSkgUmlnaHRzIEFwcGxlIENvbXB1dGVyLCBJbmMuICgyMDAwKQA7/9sAhAABAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI" alt="Marina Dimshits" class="w-full h-auto object-cover shadow-xl">
-                </div>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- About Marina Section: White Background -->
+        <section id="about" class="bg-white" aria-labelledby="about-heading">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Photo -->
+                    <div class="order-2 md:order-1" data-aos="fade-right">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+                             alt="Marina Dimshits - Professional Mental Health Coach"
+                             class="w-full h-auto object-cover shadow-xl"
+                             loading="lazy">
+                    </div>
 
-                <!-- Content -->
-                <div class="order-1 md:order-2">
-                    <h2 class="text-4xl font-bold text-navy mb-6">Meet Marina Dimshits</h2>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        Mental Health Coach and founder of Luminary. I help high-achievers transform life crises into powerful turning points through a unique blend of neuroscience and sacred traditions.
-                    </p>
+                    <!-- Content -->
+                    <div class="order-1 md:order-2" data-aos="fade-left">
+                        <h2 id="about-heading" class="text-4xl md:text-5xl font-bold text-navy mb-6">Meet Marina Dimshits</h2>
+                        <p class="text-xl text-gray-700 mb-6 leading-relaxed">
+                            Mental Health Coach and founder of Luminary. I help high-achievers transform life crises into powerful turning points through a unique blend of neuroscience and sacred traditions.
+                        </p>
 
-                    <!-- Credential Badges - Horizontal -->
-                    <div class="flex flex-wrap gap-4 mb-6">
-                        <div class="badge">
-                            <svg class="w-5 h-5 text-copper" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
-                            Harvard Medical School
-                        </div>
-                        <div class="badge">
-                            <svg class="w-5 h-5 text-copper" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
-                            Yale University
-                        </div>
-                        <div class="badge">
-                            <svg class="w-5 h-5 text-copper" fill="currentColor" viewBox="0 0 20 20"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path></svg>
-                            1,000+ Clients
-                        </div>
-                        <div class="badge">
-                            <svg class="w-5 h-5 text-copper" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-                            6+ Years Experience
+                        <!-- Credential Badges - Horizontal -->
+                        <div class="flex flex-wrap gap-4 mb-6">
+                            <div class="badge">
+                                <svg class="w-5 h-5 text-copper" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
+                                Harvard Medical School
+                            </div>
+                            <div class="badge">
+                                <svg class="w-5 h-5 text-copper" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
+                                Yale University
+                            </div>
+                            <div class="badge">
+                                <svg class="w-5 h-5 text-copper" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path></svg>
+                                1,000+ Clients
+                            </div>
+                            <div class="badge">
+                                <svg class="w-5 h-5 text-copper" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                                6+ Years Experience
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- What You'll Gain Section: Deep Navy Background with Horizontal Icons -->
-    <section id="benefits" class="bg-navy text-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">What You'll Gain</h2>
-            <p class="text-xl text-center mb-12 text-gray-300">Beyond stress management—sustainable transformation</p>
+        <!-- What You'll Gain Section: Deep Navy Background with Horizontal Icons -->
+        <section id="benefits" class="bg-navy text-white" aria-labelledby="benefits-heading">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 id="benefits-heading" class="text-4xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">What You'll Gain</h2>
+                <p class="text-2xl text-center mb-12 text-gray-300" data-aos="fade-up" data-aos-delay="100">Beyond stress management—sustainable transformation</p>
 
-            <!-- Horizontal Icon Grid -->
-            <div class="horizontal-cards">
-                <!-- Icon 1: Resilience -->
-                <div class="text-center">
-                    <div class="icon-circle">
-                        <svg class="w-10 h-10 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
+                <!-- Horizontal Icon Grid -->
+                <div class="horizontal-cards">
+                    <!-- Icon 1: Resilience -->
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-circle">
+                            <svg class="w-10 h-10 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Resilience</h3>
+                        <p class="text-gray-300 text-xl">Adapt to uncertainty with unshakeable internal stability</p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3">Resilience</h3>
-                    <p class="text-gray-300">Adapt to uncertainty with unshakeable internal stability</p>
-                </div>
 
-                <!-- Icon 2: Identity -->
-                <div class="text-center">
-                    <div class="icon-circle">
-                        <svg class="w-10 h-10 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
+                    <!-- Icon 2: Identity -->
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-circle">
+                            <svg class="w-10 h-10 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">New Identity</h3>
+                        <p class="text-gray-300 text-xl">Define your cultural identity and confident self</p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3">New Identity</h3>
-                    <p class="text-gray-300">Define your cultural identity and confident self</p>
-                </div>
 
-                <!-- Icon 3: Purpose -->
-                <div class="text-center">
-                    <div class="icon-circle">
-                        <svg class="w-10 h-10 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                        </svg>
+                    <!-- Icon 3: Purpose -->
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon-circle">
+                            <svg class="w-10 h-10 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Clear Purpose</h3>
+                        <p class="text-gray-300 text-xl">Transform crisis into your growth turning point</p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3">Clear Purpose</h3>
-                    <p class="text-gray-300">Transform crisis into your growth turning point</p>
-                </div>
 
-                <!-- Icon 4: Freedom -->
-                <div class="text-center">
-                    <div class="icon-circle">
-                        <svg class="w-10 h-10 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-                        </svg>
+                    <!-- Icon 4: Freedom -->
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon-circle">
+                            <svg class="w-10 h-10 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Inner Freedom</h3>
+                        <p class="text-gray-300 text-xl">Create happiness in times of uncertainty</p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3">Inner Freedom</h3>
-                    <p class="text-gray-300">Create happiness in times of uncertainty</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Programs Section: White Background with Horizontal Cards -->
-    <section id="programs" class="bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center text-navy mb-4">Your Transformation Path</h2>
-            <p class="text-xl text-center text-gray-600 mb-12">Choose the program that fits your journey</p>
+        <!-- Programs Section: White Background with Horizontal Cards -->
+        <section id="programs" class="bg-white" aria-labelledby="programs-heading">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 id="programs-heading" class="text-4xl md:text-5xl font-bold text-center text-navy mb-4" data-aos="fade-up">Your Transformation Path</h2>
+                <p class="text-2xl text-center text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">Choose the program that fits your journey</p>
 
-            <!-- Horizontal Pricing Cards -->
-            <div class="horizontal-cards">
-                <!-- Mini Package -->
-                <div class="bg-light-gray p-8 rounded-xl text-center hover:shadow-xl transition-shadow">
-                    <h3 class="text-3xl font-bold text-navy mb-3">Mini</h3>
-                    <p class="text-5xl font-bold text-copper mb-4">$550</p>
-                    <p class="text-gray-600 mb-6">3 Sessions</p>
-                    <p class="text-gray-700 mb-6">Targeted relief for one specific challenge</p>
-                    <a href="#contact" class="btn-primary w-full block text-center">Get Started</a>
-                </div>
+                <!-- Horizontal Pricing Cards -->
+                <div class="horizontal-cards">
+                    <!-- Mini Package -->
+                    <div class="bg-light-gray p-8 rounded-xl text-center hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-3xl font-bold text-navy mb-3">Mini</h3>
+                        <p class="text-5xl font-bold text-copper mb-4">$550</p>
+                        <p class="text-gray-600 mb-6 text-xl">3 Sessions</p>
+                        <p class="text-gray-700 mb-6 text-xl">Targeted relief for one specific challenge</p>
+                        <ul class="feature-list text-left text-gray-700 mb-6">
+                            <li>✓ Initial assessment call</li>
+                            <li>✓ 3 x 60-minute sessions</li>
+                            <li>✓ Email support between sessions</li>
+                            <li>✓ Personalized resources</li>
+                        </ul>
+                        <a href="#contact" class="btn-primary w-full block text-center" aria-label="Get started with Mini package">Get Started</a>
+                    </div>
 
-                <!-- Deep Dive Package (Featured) -->
-                <div class="bg-navy text-white p-8 rounded-xl text-center transform md:scale-105 hover:shadow-2xl transition-all relative">
-                    <div class="absolute top-0 right-0 bg-copper text-white px-4 py-1 rounded-bl-xl rounded-tr-xl text-sm font-bold">POPULAR</div>
-                    <h3 class="text-3xl font-bold mb-3">Deep Dive</h3>
-                    <p class="text-5xl font-bold text-copper mb-4">$1,700</p>
-                    <p class="text-gray-300 mb-6">10 Sessions</p>
-                    <p class="mb-6">Complete transformation cycle—from crisis to clarity</p>
-                    <a href="#contact" class="bg-copper hover:bg-opacity-90 text-white px-8 py-3 rounded-lg font-semibold inline-block">Get Started</a>
-                </div>
+                    <!-- Deep Dive Package (Featured) -->
+                    <div class="bg-navy text-white p-8 rounded-xl text-center transform md:scale-105 hover:shadow-2xl transition-all relative" data-aos="fade-up" data-aos-delay="300">
+                        <div class="absolute top-0 right-0 bg-copper text-white px-4 py-1 rounded-bl-xl rounded-tr-xl text-sm font-bold">POPULAR</div>
+                        <h3 class="text-3xl font-bold mb-3">Deep Dive</h3>
+                        <p class="text-5xl font-bold text-copper mb-4">$1,700</p>
+                        <p class="text-gray-300 mb-6 text-xl">10 Sessions</p>
+                        <p class="mb-6 text-xl">Complete transformation cycle—from crisis to clarity</p>
+                        <ul class="feature-list text-left mb-6">
+                            <li>✓ Comprehensive assessment</li>
+                            <li>✓ 10 x 60-minute sessions</li>
+                            <li>✓ Priority email & SMS support</li>
+                            <li>✓ Custom transformation roadmap</li>
+                            <li>✓ Neuroscience tools & techniques</li>
+                            <li>✓ Progress tracking dashboard</li>
+                        </ul>
+                        <a href="#contact" class="bg-copper hover:bg-opacity-90 text-white px-8 py-3 rounded-lg font-semibold inline-block text-xl" aria-label="Get started with Deep Dive package">Get Started</a>
+                    </div>
 
-                <!-- VIP Package -->
-                <div class="bg-light-gray p-8 rounded-xl text-center hover:shadow-xl transition-shadow">
-                    <h3 class="text-3xl font-bold text-navy mb-3">VIP</h3>
-                    <p class="text-5xl font-bold text-copper mb-4">$3,000+</p>
-                    <p class="text-gray-600 mb-6">3 Months</p>
-                    <p class="text-gray-700 mb-6">Unlimited support with continuous guidance</p>
-                    <a href="#contact" class="btn-primary w-full block text-center">Get Started</a>
+                    <!-- VIP Package -->
+                    <div class="bg-light-gray p-8 rounded-xl text-center hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="400">
+                        <h3 class="text-3xl font-bold text-navy mb-3">VIP</h3>
+                        <p class="text-5xl font-bold text-copper mb-4">$3,000+</p>
+                        <p class="text-gray-600 mb-6 text-xl">3 Months</p>
+                        <p class="text-gray-700 mb-6 text-xl">Unlimited support with continuous guidance</p>
+                        <ul class="feature-list text-left text-gray-700 mb-6">
+                            <li>✓ Everything in Deep Dive</li>
+                            <li>✓ Unlimited sessions (3 months)</li>
+                            <li>✓ 24/7 text support access</li>
+                            <li>✓ Monthly strategy reviews</li>
+                            <li>✓ Sacred ceremony experiences</li>
+                            <li>✓ Lifetime resource library</li>
+                        </ul>
+                        <a href="#contact" class="btn-primary w-full block text-center" aria-label="Get started with VIP package">Get Started</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Testimonials Section: Deep Navy with Slider -->
-    <section id="testimonials" class="bg-navy text-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">Client Transformations</h2>
-            <p class="text-xl text-center text-gray-300 mb-12">Real stories from real people</p>
+        <!-- FAQ Section -->
+        <section id="faq" class="bg-light-beige" aria-labelledby="faq-heading">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 id="faq-heading" class="text-4xl md:text-5xl font-bold text-center text-navy mb-4" data-aos="fade-up">Frequently Asked Questions</h2>
+                <p class="text-2xl text-center text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">Everything you need to know</p>
 
-            <!-- Swiper Slider -->
-            <div class="swiper testimonial-slider">
-                <div class="swiper-wrapper">
-                    <!-- Testimonial 1 -->
-                    <div class="swiper-slide">
-                        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
-                            <p class="text-xl italic mb-6 leading-relaxed">
-                                "Working with Marina was the turning point. I stopped feeling guilty about my relocation and finally started building a home here. Her approach using neuroscience and ancient symbols is truly unique."
-                            </p>
-                            <p class="font-bold text-copper text-lg">— Client A</p>
-                            <p class="text-gray-300">Entrepreneur, Berlin</p>
+                <div class="space-y-4">
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            <span>How is your approach different from traditional therapy?</span>
+                            <svg class="faq-icon w-6 h-6 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>I blend Harvard Medical School's neuroscience research with Yale's positive psychology and sacred traditions. This creates a unique transformation framework that addresses both scientific understanding and deeper meaning-making—perfect for high-achievers seeking sustainable change.</p>
                         </div>
                     </div>
 
-                    <!-- Testimonial 2 -->
-                    <div class="swiper-slide">
-                        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
-                            <p class="text-xl italic mb-6 leading-relaxed">
-                                "I was suffering from severe burnout after the move. Marina didn't just give me stress management tips; she helped me redefine my professional identity. I regained my energy and confidence."
-                            </p>
-                            <p class="font-bold text-copper text-lg">— Client B</p>
-                            <p class="text-gray-300">High-Achiever, New York</p>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            <span>How long does it take to see results?</span>
+                            <svg class="faq-icon w-6 h-6 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Most clients report noticeable shifts within 3-4 sessions. The Mini package provides targeted relief, while the Deep Dive (10 sessions) delivers comprehensive transformation. The VIP program ensures sustained change over 3 months.</p>
                         </div>
                     </div>
 
-                    <!-- Testimonial 3 -->
-                    <div class="swiper-slide">
-                        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
-                            <p class="text-xl italic mb-6 leading-relaxed">
-                                "The Deep Dive package gave me the stability I craved. The combination of Yale's science and the sacred work created a profound inner shift. I highly recommend her if you feel lost."
-                            </p>
-                            <p class="font-bold text-copper text-lg">— Client C</p>
-                            <p class="text-gray-300">Tech Executive, Lisbon</p>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            <span>Are sessions conducted online or in-person?</span>
+                            <svg class="faq-icon w-6 h-6 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>All sessions are conducted via secure video conferencing, allowing you to work with me from anywhere in the world. This also provides the flexibility to schedule sessions at times that work best for your timezone.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            <span>What if I'm not sure which program is right for me?</span>
+                            <svg class="faq-icon w-6 h-6 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>That's exactly what the free discovery call is for! We'll discuss your specific situation, goals, and challenges. I'll recommend the best program for your needs, and there's no obligation to commit during the call.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            <span>Do you offer refunds if I'm not satisfied?</span>
+                            <svg class="faq-icon w-6 h-6 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>I offer a satisfaction guarantee for the first two sessions. If after your second session you feel the coaching isn't right for you, I'll refund the remaining sessions. Your transformation and satisfaction are my top priorities.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Navigation -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination mt-8"></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Final CTA Section: Full-Width Image Background -->
-    <section id="contact" class="hero-section flex items-center justify-center text-center text-white min-h-[60vh]">
-        <div class="max-w-3xl px-6">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">Begin Your Transformation Today</h2>
-            <p class="text-xl mb-8">Ready to turn crisis into your defining growth point?</p>
-            <a href="#" class="btn-primary text-lg mb-8 inline-block">Book Your Free Discovery Call</a>
+        <!-- Testimonials Section: Deep Navy with Slider -->
+        <section id="testimonials" class="bg-navy text-white" aria-labelledby="testimonials-heading">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 id="testimonials-heading" class="text-4xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">Client Transformations</h2>
+                <p class="text-2xl text-center text-gray-300 mb-12" data-aos="fade-up" data-aos-delay="100">Real stories from real people</p>
 
-            <!-- Contact Info -->
-            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 mt-8 inline-block">
-                <p class="text-lg mb-2">📧 [Your Email]</p>
-                <p class="text-lg mb-2">📱 [Your Phone]</p>
-                <p class="text-lg">💼 [LinkedIn Profile]</p>
+                <!-- Swiper Slider -->
+                <div class="swiper testimonial-slider" data-aos="fade-up" data-aos-delay="200">
+                    <div class="swiper-wrapper">
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
+                                <p class="text-2xl italic mb-6 leading-relaxed">
+                                    "Working with Marina was the turning point. I stopped feeling guilty about my relocation and finally started building a home here. Her approach using neuroscience and ancient symbols is truly unique."
+                                </p>
+                                <p class="font-bold text-copper text-xl">— Sarah Chen</p>
+                                <p class="text-gray-300 text-lg">Tech Entrepreneur, Berlin</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
+                                <p class="text-2xl italic mb-6 leading-relaxed">
+                                    "I was suffering from severe burnout after the move. Marina didn't just give me stress management tips; she helped me redefine my professional identity. I regained my energy and confidence."
+                                </p>
+                                <p class="font-bold text-copper text-xl">— David Kowalski</p>
+                                <p class="text-gray-300 text-lg">Investment Banker, New York</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
+                                <p class="text-2xl italic mb-6 leading-relaxed">
+                                    "The Deep Dive package gave me the stability I craved. The combination of Yale's science and the sacred work created a profound inner shift. I highly recommend her if you feel lost."
+                                </p>
+                                <p class="font-bold text-copper text-xl">— Ana Rodriguez</p>
+                                <p class="text-gray-300 text-lg">Tech Executive, Lisbon</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="swiper-button-next" aria-label="Next testimonial"></div>
+                    <div class="swiper-button-prev" aria-label="Previous testimonial"></div>
+                    <div class="swiper-pagination" role="tablist"></div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Final CTA Section: Full-Width Image Background -->
+        <section id="contact" class="hero-section flex items-center justify-center text-center text-white min-h-[60vh]" aria-labelledby="contact-heading">
+            <div class="max-w-4xl px-6" data-aos="fade-up">
+                <h2 id="contact-heading" class="text-4xl md:text-5xl font-bold mb-6">Begin Your Transformation Today</h2>
+                <p class="text-2xl mb-12">Ready to turn crisis into your defining growth point?</p>
+
+                <!-- Calendly Integration - Replace with your actual Calendly link -->
+                <a href="https://calendly.com/your-calendar-link"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn-primary text-lg mb-12 inline-block"
+                   aria-label="Schedule your free discovery call on Calendly">
+                    Book Your Free Discovery Call
+                </a>
+
+                <!-- Contact Info Card with Better UX -->
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Email -->
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-text">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">
+                                <a href="mailto:marina@luminarycoaching.com">marina@luminarycoaching.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-text">
+                            <div class="contact-label">Phone</div>
+                            <div class="contact-value">
+                                <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LinkedIn -->
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-text">
+                            <div class="contact-label">LinkedIn</div>
+                            <div class="contact-value">
+                                <a href="https://linkedin.com/in/marina-dimshits" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer: Comprehensive 3-Column Layout -->
-    <footer class="py-12">
+    <footer class="py-12" role="contentinfo">
         <div class="max-w-6xl mx-auto px-6">
             <!-- 3-Column Grid -->
             <div class="grid md:grid-cols-3 gap-12 mb-8">
                 <!-- Column 1: About -->
                 <div>
                     <h3 class="text-2xl font-bold mb-4 text-copper">Luminary</h3>
-                    <p class="text-gray-300 leading-relaxed">
+                    <p class="text-gray-300 leading-relaxed text-lg">
                         Transforming life crises into powerful growth points through the intersection of neuroscience and sacred traditions.
                     </p>
                 </div>
 
                 <!-- Column 2: Quick Links -->
-                <div>
+                <nav aria-label="Footer navigation">
                     <h4 class="text-xl font-bold mb-4 text-copper">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#about" class="text-gray-300 hover:text-copper transition">About Marina</a></li>
-                        <li><a href="#benefits" class="text-gray-300 hover:text-copper transition">What You'll Gain</a></li>
-                        <li><a href="#programs" class="text-gray-300 hover:text-copper transition">Programs</a></li>
-                        <li><a href="#testimonials" class="text-gray-300 hover:text-copper transition">Testimonials</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-copper transition text-lg">About Marina</a></li>
+                        <li><a href="#benefits" class="text-gray-300 hover:text-copper transition text-lg">What You'll Gain</a></li>
+                        <li><a href="#programs" class="text-gray-300 hover:text-copper transition text-lg">Programs</a></li>
+                        <li><a href="#faq" class="text-gray-300 hover:text-copper transition text-lg">FAQ</a></li>
+                        <li><a href="#testimonials" class="text-gray-300 hover:text-copper transition text-lg">Testimonials</a></li>
                     </ul>
-                </div>
+                </nav>
 
                 <!-- Column 3: Contact -->
                 <div>
                     <h4 class="text-xl font-bold mb-4 text-copper">Get In Touch</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li>📧 [Your Email Address]</li>
-                        <li>📱 [Your Phone Number]</li>
-                        <li>💼 [LinkedIn Profile]</li>
+                    <ul class="space-y-2 text-gray-300 text-lg">
+                        <li>📧 marina@luminarycoaching.com</li>
+                        <li>📱 +1 (555) 123-4567</li>
+                        <li>💼 <a href="https://linkedin.com/in/marina-dimshits" class="hover:text-copper transition" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
                     </ul>
 
                     <!-- Social Icons -->
-                    <div class="flex gap-4 mt-4">
-                        <a href="#" class="text-gray-300 hover:text-copper transition">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <div class="flex gap-4 mt-4" role="list" aria-label="Social media links">
+                        <a href="https://linkedin.com/in/marina-dimshits" class="text-gray-300 hover:text-copper transition" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         </a>
-                        <a href="#" class="text-gray-300 hover:text-copper transition">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        <a href="https://instagram.com/luminary.coaching" class="text-gray-300 hover:text-copper transition" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                         </a>
                     </div>
                 </div>
@@ -409,17 +810,67 @@
 
             <!-- Bottom Bar -->
             <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
-                <p class="mb-2">&copy; 2025 Luminary Coaching. All rights reserved.</p>
-                <p class="text-sm italic">"Consciousness is not only cognition, but also depth, myth, and inner light."</p>
+                <p class="mb-2 text-lg">&copy; 2025 Luminary Coaching. All rights reserved.</p>
+                <p class="text-base italic">"Consciousness is not only cognition, but also depth, myth, and inner light."</p>
             </div>
         </div>
     </footer>
 
+    <!-- Schema.org JSON-LD Markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Luminary Coaching",
+        "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80",
+        "description": "Transform crisis into growth with Harvard-certified mental health coaching for high-achievers in transition.",
+        "founder": {
+            "@type": "Person",
+            "name": "Marina Dimshits",
+            "jobTitle": "Mental Health Coach",
+            "alumniOf": [
+                {
+                    "@type": "EducationalOrganization",
+                    "name": "Harvard Medical School"
+                },
+                {
+                    "@type": "EducationalOrganization",
+                    "name": "Yale University"
+                }
+            ]
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US"
+        },
+        "telephone": "+1-555-123-4567",
+        "email": "marina@luminarycoaching.com",
+        "priceRange": "$550-$3000+",
+        "url": "https://luminarycoaching.com",
+        "sameAs": [
+            "https://linkedin.com/in/marina-dimshits",
+            "https://instagram.com/luminary.coaching"
+        ]
+    }
+    </script>
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Initialize Everything -->
     <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Initialize Swiper
         const swiper = new Swiper('.testimonial-slider', {
             slidesPerView: 1,
             spaceBetween: 30,
@@ -450,6 +901,44 @@
                     });
                 }
             });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    this.setAttribute('aria-expanded', 'true');
+                }
+            });
+
+            // Keyboard support for FAQ
+            question.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+
+        // Header scroll effect
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
     </script>
 </body>
