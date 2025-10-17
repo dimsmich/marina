@@ -1,0 +1,98 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                    JETOX EDUCATION DESIGN SYSTEM                              ║
+║                         Quick Reference Card                                  ║
+╠═══════════════════════════════════════════════════════════════════════════════╣
+║                                                                               ║
+║  🎨 PRIMARY COLORS                                                           ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║  Brand Navy:    #011E41  █████  (Dark, Professional)                        ║
+║  Light Beige:   #E7E6E2  █████  (Warm, Approachable)                        ║
+║  Warm Brown:    #9B552B  █████  (Accent, CTAs)                              ║
+║  Bright Blue:   #2196F3  █████  (Links, Interactive)                        ║
+║                                                                               ║
+║  📝 TYPOGRAPHY                                                               ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║  Headings:  Forum (Serif, Bold 700)                                         ║
+║  Body:      Jost (Sans-serif, Normal 400)                                   ║
+║                                                                               ║
+║  H1 Hero:        50px  |  Line Height: 1.2                                  ║
+║  H2 Section:     46px  |  Line Height: 1.2                                  ║
+║  Body Normal:    24px  |  Line Height: 1.55                                 ║
+║  Body Small:     18px  |  Line Height: 1.55                                 ║
+║                                                                               ║
+║  📐 SPACING SCALE                                                            ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║  Small:        40px   [Compact sections]                                    ║
+║  Normal:       80px   [Standard sections]                                   ║
+║  Large:       120px   [Feature sections]                                    ║
+║  Extra Large: 160px   [Hero sections]                                       ║
+║                                                                               ║
+║  🔘 BUTTONS                                                                  ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║  Size      Font    Padding(V/H)    Radius                                   ║
+║  Large     24px    16px/32px       10px                                     ║
+║  Normal    18px    12px/24px       8px                                      ║
+║  Small     16px    10px/20px       6px                                      ║
+║                                                                               ║
+║  Primary:   Solid warm brown (#9B552B) bg, white text                       ║
+║  Secondary: Navy outline (#011E41), navy text                               ║
+║                                                                               ║
+║  📱 RESPONSIVE BREAKPOINTS                                                   ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║  Desktop:              1200px+  [default, no suffix]                        ║
+║  Tablet Landscape:     1024px   [-tl suffix]                                ║
+║  Tablet Portrait:       768px   [-tp suffix]                                ║
+║  Smartphone Landscape:  568px   [-sl suffix]                                ║
+║  Smartphone Portrait:   320px   [-sp suffix]                                ║
+║                                                                               ║
+║  🏗️  GRID SYSTEM                                                             ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║  Columns:  12-column flexible grid                                          ║
+║  Gutters:  32px (desktop) | 24px (tablet) | 16px (mobile)                  ║
+║  Pattern:  .span_[n]_of_12 + responsive suffixes                            ║
+║                                                                               ║
+║  🎭 KEY COMPONENTS                                                           ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║  Navigation:  Sticky topbar, transparent → solid on scroll                  ║
+║  Hero:        Two-column layout, video background support                   ║
+║  Sections:    Flexible width (wide/narrow/full)                             ║
+║  Overlays:    Dark rgba(1,30,65,0.6) for video backgrounds                  ║
+║                                                                               ║
+║  ✨ CSS NAMING CONVENTION                                                    ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║  Base:        .learnworlds- or .lw-                                         ║
+║  Components:  .learnworlds-[component]-[variant]                            ║
+║  JavaScript:  .js-[component] (for JS-enhanced elements)                    ║
+║  Responsive:  [class]-tp, [class]-tl, [class]-sl, [class]-sp               ║
+║                                                                               ║
+║  🎯 BRAND PERSONALITY                                                        ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║  Professional  [Dark navy conveys authority]                                ║
+║  Warm          [Beige & brown add approachability]                          ║
+║  Trustworthy   [Serif headings suggest expertise]                           ║
+║  Modern        [Clean typography, generous spacing]                         ║
+║                                                                               ║
+║  ♿ ACCESSIBILITY                                                            ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║  WCAG Level:      AA Compliant                                              ║
+║  Min Font Size:   18px                                                      ║
+║  Contrast Ratio:  15.2:1 (Navy on Beige)                                    ║
+║                   16.8:1 (White on Navy)                                    ║
+║                                                                               ║
+║  📊 PLATFORM                                                                 ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║  System:   LearnWorlds v3.65.3                                              ║
+║  CDN:      https://cdn.mycourse.app/                                        ║
+║  Type:     Cloud-based LMS                                                  ║
+║                                                                               ║
+╠═══════════════════════════════════════════════════════════════════════════════╣
+║  📁 ANALYSIS FILES                                                           ║
+║  • jetox_design_analysis.md       [16KB - Complete documentation]          ║
+║  • jetox_design_tokens.json       [5.4KB - Structured tokens]              ║
+║  • jetox_component_catalog.md     [14KB - Component library]               ║
+║  • JETOX_ANALYSIS_SUMMARY.md      [10KB - Executive summary]               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+Website: https://education.jetox.ae/home
+Analysis Date: October 17, 2025
+Generated by: Claude Code - Design Systems Intelligence

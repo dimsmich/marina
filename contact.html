@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Marina - Luminary Coaching</title>
+
+    <!-- Fonts: Playfair Display (serif) + Jost (sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Jost', 'sans-serif'],
+                    },
+                    colors: {
+                        'navy': '#011E41',
+                        'copper': '#9B552B',
+                        'light-gray': '#f5f5f5',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Hero Section with Background */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(1, 30, 65, 0.85), rgba(1, 30, 65, 0.6)),
+                        url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 40vh;
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            background: #9B552B;
+            color: white;
+            padding: 16px 40px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: #7d4423;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(155, 85, 43, 0.3);
+        }
+
+        /* Form Input Styles */
+        .form-input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            font-family: 'Jost', sans-serif;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #9B552B;
+            box-shadow: 0 0 0 3px rgba(155, 85, 43, 0.1);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #011E41;
+            font-size: 15px;
+        }
+
+        /* Contact Card Styles */
+        .contact-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .contact-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #9B552B, #7d4423);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        /* Section Padding */
+        section {
+            padding: 80px 20px;
+        }
+
+        /* Animation for form elements */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Success Message */
+        .success-message {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            display: none;
+            align-items: center;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .success-message.show {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-navy">Luminary</a>
+            <a href="index.html" class="text-navy hover:text-copper transition-colors font-semibold">← Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center text-center text-white pt-20">
+        <div class="max-w-4xl px-6">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Let's Start Your Journey
+            </h1>
+            <p class="text-xl md:text-2xl font-light">
+                Book your free discovery call or leave a message
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-light-gray">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+                <!-- Contact Form -->
+                <div class="contact-card animate-fadeInUp">
+                    <h2 class="text-3xl font-bold text-navy mb-6">Leave a Message</h2>
+                    <p class="text-gray-600 mb-8">Fill out the form below and I'll get back to you within 24 hours.</p>
+
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                        </div>
+
+                        <div>
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+                        </div>
+
+                        <div>
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 123-4567">
+                        </div>
+
+                        <div>
+                            <label for="package" class="form-label">Interested Package</label>
+                            <select id="package" name="package" class="form-input">
+                                <option value="">Select a package (optional)</option>
+                                <option value="mini">Mini Package - $550</option>
+                                <option value="deep-dive">Deep Dive Package - $1,700</option>
+                                <option value="vip">VIP Package - $3,000+</option>
+                                <option value="discovery">Free Discovery Call</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="form-label">Your Message *</label>
+                            <textarea id="message" name="message" rows="6" class="form-input resize-none" placeholder="Tell me about your current situation and what you're looking to achieve..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary w-full">
+                            Send Message
+                        </button>
+
+                        <div id="successMessage" class="success-message">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Message sent successfully! I'll get back to you soon.</span>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Information Cards -->
+                <div class="space-y-6 animate-fadeInUp">
+                    <h2 class="text-3xl font-bold text-navy mb-6">Get In Touch</h2>
+
+                    <!-- Email Card -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-2">Email</h3>
+                        <a href="mailto:[Your Email]" class="text-copper hover:underline text-lg font-semibold">[Your Email]</a>
+                        <p class="text-gray-600 mt-2">I'll respond within 24 hours</p>
+                    </div>
+
+                    <!-- Phone Card -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-2">Phone</h3>
+                        <a href="tel:[Your Phone]" class="text-copper hover:underline text-lg font-semibold">[Your Phone]</a>
+                        <p class="text-gray-600 mt-2">Available Mon-Fri, 9am-6pm EST</p>
+                    </div>
+
+                    <!-- Booking Card -->
+                    <div class="contact-card bg-navy text-white">
+                        <div class="contact-icon bg-white">
+                            <svg class="w-7 h-7 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Book a Call</h3>
+                        <p class="text-gray-300 mb-4">Schedule your free 30-minute discovery call</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-copper hover:text-white transition-colors font-semibold">
+                            View Calendar
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="contact-card">
+                        <h3 class="text-xl font-bold text-navy mb-4">Connect on Social</h3>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-12 h-12 bg-navy hover:bg-copper rounded-lg flex items-center justify-center transition-colors">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-navy hover:bg-copper rounded-lg flex items-center justify-center transition-colors">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12 mb-8">
+                <!-- Column 1: About -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-copper">Luminary</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Transforming life crises into powerful growth points through the intersection of neuroscience and sacred traditions.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4 text-copper">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#about" class="text-gray-300 hover:text-copper transition">About Marina</a></li>
+                        <li><a href="index.html#benefits" class="text-gray-300 hover:text-copper transition">What You'll Gain</a></li>
+                        <li><a href="index.html#programs" class="text-gray-300 hover:text-copper transition">Programs</a></li>
+                        <li><a href="index.html#testimonials" class="text-gray-300 hover:text-copper transition">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4 text-copper">Get In Touch</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>📧 [Your Email]</li>
+                        <li>📱 [Your Phone]</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p class="mb-2">&copy; 2025 Luminary Coaching. All rights reserved.</p>
+                <p class="text-sm italic">"Consciousness is not only cognition, but also depth, myth, and inner light."</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Form Submission Script -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Simulate form submission
+            const successMessage = document.getElementById('successMessage');
+            successMessage.classList.add('show');
+
+            // Reset form
+            this.reset();
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 5000);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
