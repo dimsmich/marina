@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Marina - Luminary Coaching</title>
 
-    <!-- Fonts: Playfair Display (serif) + Jost (sans-serif) -->
+    <!-- Fonts: Forum (serif) + Jost (sans-serif) - Matching main page -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -16,7 +16,7 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        serif: ['Playfair Display', 'serif'],
+                        serif: ['Forum', 'serif'],
                         sans: ['Jost', 'sans-serif'],
                     },
                     colors: {
@@ -36,7 +36,8 @@
         }
 
         h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Forum', serif;
+            font-weight: 700;
         }
 
         /* Hero Section with Background */
@@ -155,6 +156,67 @@
 
         .success-message.show {
             display: flex;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 30vh;
+                background-attachment: scroll;
+            }
+
+            h1 {
+                font-size: 2.5rem !important;
+                line-height: 1.2;
+            }
+
+            h2 {
+                font-size: 1.75rem !important;
+            }
+
+            section {
+                padding: 40px 16px;
+            }
+
+            .contact-card {
+                padding: 24px;
+            }
+
+            .contact-icon {
+                width: 48px;
+                height: 48px;
+            }
+
+            .btn-primary {
+                width: 100%;
+                text-align: center;
+            }
+
+            header .text-3xl {
+                font-size: 1.5rem;
+            }
+
+            header a:last-child {
+                font-size: 0.875rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2rem !important;
+            }
+
+            h2 {
+                font-size: 1.5rem !important;
+            }
+
+            .contact-card {
+                padding: 20px;
+            }
+
+            section {
+                padding: 32px 12px;
+            }
         }
     </style>
 </head>
