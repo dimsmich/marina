@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Luminary Coaching: Find Your Inner Light</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+   <script src="https://cdn.tailwindcss.com"></script>
+   <script>
+       tailwind.config = {
+           theme: {
+               extend: {
+                   fontFamily: {
+                       sans: ['Poppins', 'sans-serif'],
+                   },
+                   colors: {
+                       'brand-blue': '#2c3e50',
+                       'brand-gold': '#f39c12',
+                       'soft-gray': '#f8f9fa',
+                       'dark-gray': '#34495e',
+                   }
+               }
+           }
+       }
+   </script>
+   <style>
+       body {
+           font-family: 'Poppins', sans-serif;
+           background-color: #f8f9fa;
+           color: #34495e;
+           scroll-behavior: smooth;
+       }
+       section {
+           padding: 5rem 0;
+       }
+       .container {
+           max-width: 1200px;
+           margin: 0 auto;
+           padding: 0 1rem;
+       }
+       .cta-button {
+           background-color: #f39c12;
+           color: white;
+           font-weight: 700;
+           padding: 0.75rem 2.5rem;
+           border-radius: 0.5rem;
+           transition: background-color 0.3s ease, transform 0.2s;
+           box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
+       }
+       .cta-button:hover {
+           background-color: #e67e22;
+           transform: translateY(-2px);
+       }
+       .card {
+           background-color: white;
+           border-radius: 1rem;
+           box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+           padding: 2rem;
+           border-top: 4px solid #f39c12;
+           height: 100%;
+       }
+   </style>
+</head>
+<body>
+
+
+   <!-- Header Navigation (Sticky) -->
+   <header class="sticky top-0 bg-white shadow-md z-10">
+       <div class="container flex justify-between items-center py-4">
+           <a href="#hero" class="text-2xl font-extrabold text-brand-blue">Luminary</a>
+           <a href="#cta-final" class="cta-button">Book Discovery Call</a>
+       </div>
+   </header>
+
+
+   <!-- 1. Section: Hero & Intro -->
+   <section id="hero" class="bg-soft-gray min-h-screen flex items-center text-center">
+       <div class="container py-16">
+           <h1 class="text-4xl md:text-5xl font-extrabold text-brand-blue leading-tight mb-4">
+               Igniting the Inner Light in Times of Transformation
+           </h1>
+           <h2 class="text-xl md:text-2xl font-semibold text-dark-gray mb-12">
+               Find Stability, Purpose, and Resilience in Your New Chapter.
+           </h2>
+          
+           <div class="flex flex-col md:flex-row items-center md:items-start max-w-5xl mx-auto space-y-8 md:space-y-0 md:space-x-12">
+              
+               <!-- Intro Text -->
+               <div class="md:w-3/5 text-left space-y-4">
+                   <p class="text-lg text-dark-gray font-medium">
+                       I am Marina Dimshits - Mental Health Coach, researcher of consciousness, and founder of **Luminary project.** My work lies at the intersection of neuroscience, psychology, and sacred traditions. I believe that **true resilience is born where scientific knowledge meets the depth of symbols and archetypes.**
+                   </p>
+                   <p class="text-lg text-dark-gray font-medium">
+                       In my practice, I help people transform crises (relocation, professional burnout, the loss of meaning or inner ground) into turning points for growth. I draw on contemporary research from Harvard Medical School, Yale University, and neuroscience, while weaving in archetypal systems and ancient practices.
+                   </p>
+                   <p class="text-lg text-dark-gray font-medium font-bold text-brand-blue">
+                       My focus is the human being in transformation. Not merely stress management, but the cultivation of resilience; not just overcoming, but the art of creating happiness and inner freedom in times of uncertainty.
+                   </p>
+                   <a href="#cta-final" class="mt-8 cta-button inline-block text-lg">Book a Free Discovery Call</a>
+               </div>
+
+
+               <!-- Photo Section -->
+               <div class="md:w-2/5 flex flex-col items-center">
+                   <div class="w-64 h-64 rounded-full overflow-hidden shadow-2xl border-4 border-brand-gold">
+                       <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD//gA7Q1JFQVRPUjogSU1BR0VOIFJFQURFUyBNUVAgNjcuMTUgMjAwMTowOToyNyAoVmVyc2lvbiB0aGVzZSkgUmlnaHRzIEFwcGxlIENvbXB1dGVyLCBJbmMuICgyMDAwKQA7/9sAhAABAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI" altICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI" alt="Marina Dimeshits - Professional Portrait" class="object-cover w-full h-full">
+                   </div>
+                   <p class="text-lg text-gray-500 mt-2">Coach & Founder of Luminary</p>
+               </div>
+
+
+               <!-- Text Section -->
+               <div class="w-full md:w-2/3 text-left space-y-4">
+                   <h3 class="text-2xl font-semibold text-brand-gold border-b border-brand-blue/30 pb-2 mb-4">Credentials & Approach</h3>
+                   <ul class="space-y-3 text-gray-700 list-none pl-0">
+                       <li class="flex items-start">
+                           <span class="text-brand-gold mr-3 text-xl font-bold">✓</span>
+                           <p class="font-semibold text-brand-blue">Certified Lifestyle Coach, Harvard Medical School:</p>
+                           <p class="ml-2">Specializing in mental health, neuroplasticity, and emotional regulation.</p>
+                       </li>
+                       <li class="flex items-start">
+                           <span class="text-brand-gold mr-3 text-xl font-bold">✓</span>
+                           <p class="font-semibold text-brand-blue">Advanced Training from Yale & NYU:</p>
+                           <p class="ml-2">Completed programs in Emotional Intelligence, The Science of Happiness, and well-being.</p>
+                       </li>
+                       <li class="flex items-start">
+                           <span class="text-brand-gold mr-3 text-xl font-bold">✓</span>
+                           <p class="font-semibold text-brand-blue">6+ Years of Experience:</p>
+                           <p class="ml-2">Over 1,000 adults have successfully completed my programs.</p>
+                       </li>
+                       <li class="flex items-start">
+                           <span class="text-brand-gold mr-3 text-xl font-bold">✓</span>
+                           <p class="font-semibold text-brand-blue">Areas of Expertise:</p>
+                           <p class="ml-2">Resilience, Stress Management, Burnout Recovery, and Identity Transformation.</p>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+   <!-- 5. New Section: What You Will Gain (B2C Focus) -->
+   <section id="slide-5" class="min-h-screen flex items-center py-16 text-center">
+       <div class="slide-content space-y-10">
+           <h2 class="text-4xl text-brand-blue border-b-2 pb-4 border-brand-gold w-full">What You Will Gain: Beyond Stress Management</h2>
+          
+           <p class="text-xl text-dark-gray max-w-4xl mx-auto">This is not just about coping. We work on building sustainable internal systems for long-term well-being and freedom.</p>
+
+
+           <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left flex-grow">
+               <!-- Gain Block 1: Resilience & Stability -->
+               <div class="p-6 rounded-xl border-l-4 border-brand-blue shadow-lg bg-soft-gray space-y-3">
+                   <h3 class="text-2xl font-semibold text-brand-blue flex items-center">
+                       <svg class="w-7 h-7 mr-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                       Unshakeable Internal Stability
+                   </h3>
+                   <ul class="space-y-2 text-dark-gray list-none pl-0">
+                       <li><span class="text-brand-gold mr-2 text-xl">→</span>Cultivate **Resilience** to adapt to any uncertainty.</li>
+                       <li><span class="text-brand-gold mr-2 text-xl">→</span>Master **Emotional Regulation** to handle high-stress moments calmly.</li>
+                       <li><span class="text-brand-gold mr-2 text-xl">→</span>Establish healthy **Relationship to Self** (boundaries, self-support).</li>
+                   </ul>
+               </div>
+
+
+               <!-- Gain Block 2: Purpose & Identity -->
+               <div class="p-6 rounded-xl border-l-4 border-brand-blue shadow-lg bg-soft-gray space-y-3">
+                   <h3 class="text-2xl font-semibold text-brand-blue flex items-center">
+                       <svg class="w-7 h-7 mr-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.247m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.247"></path></svg>
+                       New Purpose & Confident Identity
+                   </h3>
+                   <ul class="space-y-2 text-dark-gray list-none pl-0">
+                       <li><span class="text-brand-gold mr-2 text-xl">→</span>Transform crises into defined **Growth Turning Points**.</li>
+                       <li><span class="text-brand-gold mr-2 text-xl">→</span>Recover from **Shame & Imposter Syndrome** in a new country.</li>
+                       <li><span class="text-brand-gold mr-2 text-xl">→</span>Define your **New Cultural Identity** and build a clear future strategy.</li>
+                   </ul>
+               </div>
+           </div>
+           <a href="#cta-final" class="cta-button inline-block text-xl mt-8">Start Your Transformation</a>
+       </div>
+   </section>
+  
+   <!-- 6. Section: Programs & Packages (Prices) -->
+   <section id="slide-6" class="min-h-screen flex items-center py-16 text-center">
+       <div class="slide-content space-y-10">
+           <h2 class="text-4xl text-brand-blue border-b-2 pb-4 border-brand-gold w-full">Our Services for Your Transformation</h2>
+          
+           <p class="text-lg text-gray-600 max-w-4xl mx-auto">Flexible options designed to meet clients at any stage of their journey—from urgent relief to comprehensive, long-term support.</p>
+
+
+           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center flex-grow">
+              
+               <!-- Package 1: Mini -->
+               <div class="card bg-soft-gray flex flex-col justify-between">
+                   <h3 class="text-3xl font-extrabold text-brand-blue mb-2">Mini-Package</h3>
+                   <p class="text-4xl font-extrabold text-brand-gold mb-4">$550</p>
+                   <p class="text-lg text-gray-700 font-medium mb-4">(3 Sessions)</p>
+                   <p class="text-sm text-gray-600 flex-grow">A targeted solution for one specific issue, such as "Stress-Free Adaptation" or "Restoring Energy."</p>
+                   <p class="text-sm font-semibold text-brand-blue mt-4">Goal: Immediate relief & focus.</p>
+               </div>
+
+
+               <!-- Package 2: Deep Dive -->
+               <div class="card bg-soft-gray flex flex-col justify-between transform scale-105 shadow-xl border-t-8 border-brand-gold">
+                   <h3 class="text-3xl font-extrabold text-brand-blue mb-2">Deep Dive Package</h3>
+                   <p class="text-4xl font-extrabold text-brand-gold mb-4">$1,700</p>
+                   <p class="text-lg text-gray-700 font-medium mb-4">(10 Sessions)</p>
+                   <p class="text-sm text-gray-600 flex-grow">A complete transformation cycle, covering self-discovery, purpose, resilience, and future planning.</p>
+                   <p class="text-sm font-semibold text-brand-blue mt-4">Goal: Full transformation & sustainability.</p>
+               </div>
+
+
+               <!-- Package 3: VIP -->
+               <div class="card bg-soft-gray flex flex-col justify-between">
+                   <h3 class="text-3xl font-extrabold text-brand-blue mb-2">VIP Support</h3>
+                   <p class="text-4xl font-extrabold text-brand-gold mb-4">$3,000 - $3,500</p>
+                   <p class="text-lg text-gray-700 font-medium mb-4">(3 Months)</p>
+                   <p class="text-sm text-gray-600 flex-grow">A fully personalized program with unlimited chat support between sessions for comprehensive guidance.</p>
+                   <p class="text-sm font-semibold text-brand-blue mt-4">Goal: Continuous, high-level guidance.</p>
+               </div>
+           </div>
+           <a href="#cta-final" class="cta-button inline-block text-xl mt-8">Choose Your Path to Resilience</a>
+       </div>
+   </section>
+  
+   <!-- 7. Section: Social Proof (Testimonials) -->
+   <section id="slide-7" class="min-h-screen flex items-center py-16 text-center bg-dark-gray text-white">
+       <div class="slide-content bg-dark-gray text-white space-y-10">
+           <h2 class="text-4xl border-b-2 pb-4 border-brand-gold w-full">What Clients Say About Luminary</h2>
+          
+           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left flex-grow">
+               <!-- Placeholder 1 -->
+               <div class="p-6 rounded-xl border-t-4 border-brand-gold bg-dark-gray/90 shadow-2xl">
+                   <p class="text-lg italic">"Working with Marina was the turning point. I stopped feeling guilty about my relocation and finally started building a home here. Her approach—using neuroscience and ancient symbols—is truly unique."</p>
+                   <p class="mt-4 font-semibold text-brand-gold">— Client A, Entrepreneur, Berlin</p>
+               </div>
+              
+               <!-- Placeholder 2 -->
+               <div class="p-6 rounded-xl border-t-4 border-brand-gold bg-dark-gray/90 shadow-2xl">
+                   <p class="text-lg italic">"I was suffering from severe burnout after the move. Marina didn't just give me stress management tips; she helped me redefine my professional identity. I regained my energy and confidence."</p>
+                   <p class="mt-4 font-semibold text-brand-gold">— Client B, High-Achiever, New York</p>
+               </div>
+              
+               <!-- Placeholder 3 -->
+               <div class="p-6 rounded-xl border-t-4 border-brand-gold bg-dark-gray/90 shadow-2xl">
+                   <p class="text-lg italic">"The Deep Dive package gave me the stability I craved. The combination of Yale's science and the sacred work created a profound inner shift. I highly recommend her if you feel lost."</p>
+                   <p class="mt-4 font-semibold text-brand-gold">— Client C, Tech Executive, Lisbon</p>
+               </div>
+           </div>
+       </div>
+   </section>
+
+
+
+
+   <!-- 8. Section: Footer & Final CTA -->
+   <section id="slide-8" class="min-h-screen flex items-center py-16 text-center">
+       <div id="cta-final" class="slide-content flex flex-col items-center justify-center space-y-8">
+           <h2 class="text-5xl font-extrabold text-brand-blue leading-tight">Your Next Chapter Starts Here.</h2>
+           <p class="text-2xl text-gray-600 mb-8 max-w-2xl">Ready to turn crisis into your defining growth point? Book your free call.</p>
+          
+           <a href="#hero" class="cta-button text-2xl mb-8">Book a Free Discovery Call</a>
+
+
+           <div class="p-8 bg-soft-gray rounded-xl shadow-lg space-y-4 w-full max-w-md">
+               <p class="text-3xl font-semibold text-brand-blue">Contact Marina Dimshits</p>
+               <div class="text-xl text-dark-gray space-y-2">
+                   <p class="font-medium flex items-center justify-center"><svg class="w-6 h-6 mr-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.14c-.035.018-.07.036-.104.053-.878.444-1.921-.443-2.676-1.925C6.46 9.49 6.277 7.576 6.13 6.13M12 4v16M3 12h18"></path></svg>[Your Phone Number]</p>
+                   <p class="font-medium flex items-center justify-center"><svg class="w-6 h-6 mr-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 9v3m0-3v-3m0-4.5c0-1.105.895-2 2-2s2 .895 2 2-2 2-2 2-2-.895-2-2zM4 6h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z"></path></svg>[Your Email Address]</p>
+                   <p class="font-medium flex items-center justify-center"><svg class="w-6 h-6 mr-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9h-4V3h-2v6H9V3H7v6H2M12 19V9m0 10l-4-4m4 4l4-4"></path></svg>[Your LinkedIn Profile/Website]</p>
+               </div>
+           </div>
+          
+           <p class="text-xl font-extrabold text-brand-gold mt-auto">Luminary: Consciousness is not only cognition, but also depth, myth, and inner light.</p>
+       </div>
+   </section>
+
+
+   <!-- Scroll Indicator / Navigation Script -->
+   <script>
+       document.addEventListener('DOMContentLoaded', () => {
+           // Function to handle smooth scrolling to sections
+           document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+               anchor.addEventListener('click', function (e) {
+                   e.preventDefault();
+                   document.querySelector(this.getAttribute('href')).scrollIntoView({
+                       behavior: 'smooth'
+                   });
+               });
+           });
+
+
+           // This is a single-page scrolling site now, so the slide logic is simplified.
+          
+           // The old slide-related logic is now commented out or simplified to avoid errors
+           // and ensure correct section display for a scrolling page.
+          
+           // Since the structure is now 8 sections, we simulate the "slide" behavior using visibility
+           // but rely on native scrolling for navigation.
+          
+           // Convert slides to sections (no change to IDs, just for clarity)
+           const slideIds = ['slide-1', 'slide-2', 'slide-3', 'slide-4', 'slide-5', 'slide-6', 'slide-7', 'slide-8'];
+           slideIds.forEach(id => {
+               const el = document.getElementById(id);
+               if(el) {
+                   // Remove slide/active classes that conflict with scrolling page layout
+                   el.classList.remove('slide', 'active');
+                   // Add section classes
+                   el.classList.add('min-h-screen', 'flex', 'items-center', 'py-16');
+               }
+           });
+
+
+           // Adjust the header style for the landing page
+           const header = document.querySelector('header');
+           if(header) {
+               header.classList.remove('shadow-md');
+               header.classList.add('shadow-lg', 'bg-white/95', 'backdrop-blur-sm');
+           }
+
+
+           // Make the content box adjust height dynamically
+           document.querySelectorAll('.slide-content').forEach(el => {
+               el.classList.remove('h-95vh');
+               el.style.minHeight = '90vh';
+           });
+       });
+   </script>
+</body>
+</html>
+
+
